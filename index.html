@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Поправка — автозамена согласования в русском тексте</title>
+<link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+<div id="app">
+  <div id="toolbar">
+    <span class="logo">✎ Поправка</span>
+    <span id="status">Загрузка словарей...</span>
+    <select id="mode-select">
+      <option value="simple">Простой</option>
+      <option value="full">Полный</option>
+    </select>
+    <button id="btn-clear" title="Очистить">✕ Сбросить</button>
+  </div>
+  <div id="editor-wrap">
+    <div id="editor" contenteditable="true" data-placeholder="Начните печатать...">
+      <span class="word" data-lemma="девушка" data-pos="noun" data-gender="f" data-number="sg" data-case="nom">Девушка</span>
+      <span class="word" data-lemma="купить" data-pos="verb" data-tense="past" data-gender="f" data-number="sg">купила</span>
+      <span class="word" data-lemma="чай" data-pos="noun" data-gender="m" data-number="sg" data-case="acc" data-anim="no">чай</span>
+    </div>
+  </div>
+  <div id="word-popup" class="hidden">
+    <div id="popup-words"></div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/russian-nouns-js@2.5.0/RussianNouns.min.js"></script>
+<script src="js/dictionary.js?v=2"></script>
+<script src="js/engine.js?v=2"></script>
+<script src="js/app.js?v=2"></script>
+
+</body>
+</html>
